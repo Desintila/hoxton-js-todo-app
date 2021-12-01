@@ -92,7 +92,7 @@ function renderTodoComplete(todo){
 function addNewToDo(todo){
     state.todos.push(todo)
 }
-function renderAddToDo(){
+function AddNewToDoItem(){
     const formEl=document.querySelector('.add-item')
     formEl.addEventListener('submit',function(event){
         event.preventDefault()
@@ -105,6 +105,7 @@ function renderAddToDo(){
         formEl.reset()
     })
 }
+AddNewToDoItem()
 function getInCompleteToDo(){
     return state.todos.filter(function(todo){
         return todo.completed===false
@@ -147,7 +148,6 @@ function showComplete(){
     }
 }
 function render(){
-    renderAddToDo()
     renderInCompleteToDo()
     renderCompleteToDo()
 }
